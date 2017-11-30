@@ -1,0 +1,8 @@
+mongodb:
+  database.name: test
+  collection.name: users
+
+logging:
+  level:
+    ROOT: INFO
+    com.korfax: DEBUG
