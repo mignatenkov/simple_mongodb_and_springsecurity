@@ -23,8 +23,8 @@ public class UserRepository {
     private String mongodbCollectionName;
 
     // variant with password encoding
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     private MongoClient mongo;
     private DB mongoDB;
@@ -52,8 +52,8 @@ public class UserRepository {
         DBObject newUser = new BasicDBObject();
         newUser.put("username", username);
 //        variant with open password storage
-//        newUser.put("password", password);
-        newUser.put("password", passwordEncoder.encode(password));
+        newUser.put("password", password);
+//        newUser.put("password", passwordEncoder.encode(password));
         newUser.put("roles", roles);
         if (mongoCollection == null) {
             this.initConnection();

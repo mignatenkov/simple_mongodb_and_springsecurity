@@ -1,3 +1,7 @@
+security:
+  header.name: Authorization
+  token.secret: changeit
+
 mongodb:
   database.name: test
   collection.name: users
